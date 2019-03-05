@@ -1,8 +1,8 @@
-package com.anagramProgram;
+package com.anagramprogram;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.HashMap;
 
@@ -24,7 +24,7 @@ public class AnagramFinder {
         File dictionaryFile = new File(args[0]);
 
         try {
-            for (String line: Files.readAllLines(dictionaryFile.toPath(), StandardCharsets.ISO_8859_1)){
+            for (String line: Files.readAllLines(dictionaryFile.toPath(), Charset.forName("windows-1257"))){
                 if(isAnagram(searchedWord, line) && !searchedWord.equals(line)){
                     result += "," + line.toLowerCase();
                 }
