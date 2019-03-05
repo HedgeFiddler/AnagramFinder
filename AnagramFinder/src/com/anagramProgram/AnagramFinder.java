@@ -33,25 +33,8 @@ public class AnagramFinder {
             System.out.println("No such file, check the entered file path");
         }
 
-//        try {
-//            Files.lines(dictionaryFile.toPath(), StandardCharsets.ISO_8859_1)
-//                    .forEach(line -> {
-//                        if(isAnagram(searchedWord, line)){
-//                            result += line;
-//                        }
-//                    });
-//        } catch (IOException e) {
-//            System.out.println("No such file, check the file path");
-//        }
-//        try {
-//            BufferedReader reader = new BufferedReader(new FileReader(dictionaryFile));
-//            reader.lines().forEach( line -> System.out.println(line));
-//        } catch (FileNotFoundException e) {
-//            System.out.println("No such file, check the entered file path");
-//        }
-
         long stop = System.nanoTime() - startTime;
-        System.out.println(stop + result.toString());
+        System.out.println(stop + result);
 
     }
 
